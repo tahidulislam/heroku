@@ -1,0 +1,22 @@
+extends layout
+
+block content
+ .container
+  h1 #{title}
+  form(method='POST', action='/users/register')
+   .form-group
+    label name
+    input(name='name', type='text')
+   .form-group
+    label username
+    input(name='username', type='text')
+   .form-group
+    label email
+    input(name='email', type='email')
+   .form-group
+    label password
+    input(name='password', type='password')
+   .form-group
+    label confirm password
+    input(name='password2', type='password')
+   input(name='submit', type='submit', value='submit')

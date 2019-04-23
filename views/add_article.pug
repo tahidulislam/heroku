@@ -1,0 +1,16 @@
+extends layout
+
+block content
+ .container
+  h1 #{title}
+  form(method='POST', action='/articles/add')
+   .form-group
+    label title
+    input(name='title', type='text')
+   .form-group
+    label Author
+    input(name='author', type='text')
+   .form-group
+    label body
+    input(name='body', type='text')
+   input(name='submit', type='submit', value='submit')

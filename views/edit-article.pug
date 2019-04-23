@@ -1,0 +1,16 @@
+extends layout
+
+block content
+ .container
+  h1 #{title}
+  form(method='POST', action='/articles/edit/' + article._id)
+   .form-group
+    label title
+    input(name='title', type='text', value=article.title)
+   .form-group
+    label Author
+    input(name='author', type='text', value=article.author)
+   .form-group
+    label body
+    input(name='body', type='text', value=article.body)
+   input(name='submit', type='submit', value='submit')
